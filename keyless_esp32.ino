@@ -5,9 +5,9 @@
 
 #define kontak 2
 
-String knownBLEAddresses[] = {""}; //masukan address itag kalian
+String knownBLEAddresses[] = {""}; //masukan address itag
 int device_found;
-int scanTime = 1; //In seconds
+int scanTime = 1; /
 BLEScan* pBLEScan;
 
 class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
@@ -21,7 +21,7 @@ if (strcmp(advertisedDevice.getAddress().toString().c_str(), knownBLEAddresses[i
 dapat = true;
 }
 if (dapat == true){
-Serial.println("awokawok");
+Serial.println("berhasil mesin menyalaa");
 Serial.println(advertisedDevice.getRSSI());       
 if (advertisedDevice.getRSSI()> -80){ // rssi = -60(dekat) || rssi = -90(jauh)
   device_found = true;
@@ -59,3 +59,5 @@ void loop()
   pBLEScan->clearResults();   // delete results fromBLEScan buffer to release memory
   delay (100);
 }
+
+// catatan program ini bukan ril hasil saya. saya hanya mengembangkan exam codingnya
